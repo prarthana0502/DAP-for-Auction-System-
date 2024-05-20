@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Auction DApp</title>
+    <link rel="stylesheet" href="new.css" />
+    <style>
+      body {
+        background-image: url('img3.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="connectContainer">
+      <h1>Welcome to Auction App</h1>
+      <div class="container" id="connectContainer">
+        <button onclick="connect()">Connect Wallet</button>
+        <p id="connectButton">Status:</p>
+        <p id="accountInfo">Account Address:</p>
+      </div>
+    </div>
+  
+    <div class="container" id="auctionContainer" style="display: none;">
+      <h1>Auction</h1>
+      <p>Beneficiary: <span id="beneficiary"></span></p>
+      <p>Auction End Time: <span id="auctionEndTime"></span></p>
+      <p>Highest Bidder: <span id="highestBidder"></span></p>
+      <p>Highest Bid: <span id="highestBid"></span> ETH</p>
+      <h2>Place Bid</h2>
+      <form id="bidForm">
+        <input
+          type="number"
+          id="bidAmount"
+          placeholder="Bid Amount (ETH)"
+          step="0.001"
+          required
+        />
+        <button type="submit">Place Bid</button>
+        <p id="Status"></p>
+      </form>
+      <div class="button-container">
+        <button id="withdrawButton">Withdraw</button>
+        <p id="Status1"></p>
+        <button id="endAuctionButton">End Auction</button>
+        <p id="Status2"></p>
+        <button id="getPendingReturnsButton">Pending transactions</button>
+        <p id="pendingReturn"></p>
+      </div>
+    </div>
+    <ul id="bidderList"></ul>
+    <div class="container" id="auctionContainer" style="display: none;">
+      <button id="getBidderListButton">Get Bidder List</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.7.3/dist/web3.min.js"></script>
+    <script src="new.js"></script>
+  </body>
+</html>
